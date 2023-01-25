@@ -6,58 +6,93 @@
 		<meta charset="utf-8">
 		<style>
 			body {background-color: #EEE2DC;}
+			#wrapper {position:relative;
+					  min-height:100vh;}
 			header {background-color:#EEE2DC;
 					text-align:center;
 					font-family: georgian;}
+			#content {padding-bottom: 2.5rem;}
 			h1 {color:#AC3B61;}
 			h3 {color: #123C69;
 				text-align:center;}
+			p {text-align:center;
+				color: #123C69;}
 			nav {background-color:#AC3B61;
 				 text-align: center;
-				 font-family:times new roman;}
-			nav li {color:#EEE2DC;}
+				 font-family:times new roman;
+				 margin:0px;
+				 width:100%;}
+			nav li {color:#EEE2DC;
+					display:inline;
+					float:none;
+					font-size:18px;}
+			nav a {display:inline-block;
+				   padding:10px;}
+			nav ul {margin: 0;
+					overflow: hidden;
+					justify-content: space-between;
+					align-items: center;}
+			footer {text-align:center;
+					color:#123C69;
+					background-color:#BAB2B5;
+					position:absolute;
+					bottom:0;
+					width:100%;
+					height:2.5rem;
+					padding-top:10px;}
+			@media (max-width:800px) {
+			nav {width:100%;}
+			nav ul { display: flex;
+					flex-direction:row;
+					 flex-flow: column nowrap;
+					 justify-content: space-around; }
+			nav ul li { border-bottom: none; }
 			header { grid-area: header; }
 			nav    { grid-area: nav; }
 			main   { grid-area: main; }
 			footer { grid-area: footer; }
 			#wrapper { display: grid;
-						grid-template-areas: 
-							 "header"
-							 "nav"
-							 "main"
-							 "footer" }}
-							 
+								grid-template-areas: 
+									 "header"
+									 "nav"
+									 "main"
+									 "footer" }}
+			img {display: block;
+				 margin-left: auto;
+				 margin-right: auto;
+				 margin-top: 10px;}			 
 		</style>
 	</head>
 	<div id="wrapper">
 	<body>
 		<header>
-			<h1>All About Alli</h1>
+			<h1><a id="home">All About Alli</a></h1>
 			<h3 style="color: #EEE2DC">Alexandra Garcia</h3>
 		</header>
 		<nav>
 			<ul style="list-style:none">
-				<li>Home</li>
-				<li>Bio</li>
-				<li>Skills</li>
-				<li>Hobbies</li>
-				<li>Contact</li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#bio">Bio</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#hobbies">Hobbies</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
-		<div>
-			<img src="profile_pic.jpg" alt="headshot" width="auto" height="auto">
-			<h3>Bio</h3>
+		<div id="content">
+			<img src="profile_pic1.jpg" alt="headshot" width="150px" height="auto">
+			<h3><a id="bio">Bio</a></h3>
 			<p>Alli is in her fourth semester as an Applied Software Engineer Major. She is also minoring in Theatre and is passionate about sound design. She will also be partaking in the whatever the internship is called this upcoming summner.</p>
-			<h3>Skills</h3>
+			<h3><a id="skills">Skills</a></h3>
 			<p>Alli is proficient in coding in languages such as Java and Python. She can also code in HTML
 				and CSS. Although she is a novice in JavaScript, she is excited to learn in  ASE220!</p>
-			<h3>Hobbies</h3>
+			<h3><a id="hobbies">Hobbies</a></h3>
 			<p>Alli played clarinet for 8 years and performed one semester in the NKU Concert Band.
 				She loves crocheting and makes mostly hats. </p>
-			<h3>Contact</h3>
+			<h3><a id="contact">Contact</a></h3>
 			<p>Email: <a href="mailto:garciaa12@mymail.nku.edu">garciaa12@mymail.nku.edu</a> | Linkedin: <a href="linkedin.com/in/alli-garcia">linkedin.com/in/alli-garcia</a> | GitHub: <a href="github.com/Alli-Garcia">github.com/Alli-Garcia</a></p>
-		</div>
-		<footer>garciaa12@mymail.nku.edu | linkedin goes here | &copy Alli Garcia</footer>
+		
+		
+		<footer>garciaa12@mymail.nku.edu | linkedin.com/in/alli-garcia | &copy Alli Garcia</footer></div>
 	</body>
 	</div>
 </html>
